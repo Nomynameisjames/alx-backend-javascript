@@ -1,3 +1,4 @@
+/* creating a class instance */
 import ClassRoom from './0-classroom.js'
 export default function initializeRooms() {
 	return [
