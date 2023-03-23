@@ -1,3 +1,4 @@
+/* getters and setters */
 export default class HolbertonCourse {
   constructor(name, length, students) {
     this.name = name;
