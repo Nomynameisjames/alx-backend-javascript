@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.MyTutors = void 0;
+exports.printTeacher = void 0;
 var teacherA = {
     firstName: 'Julien',
     lastName: 'Barbier',
@@ -17,24 +17,24 @@ var directorX = {
     numberOfReports: 172,
 };
 console.log(directorX);
-var MyTutors = function (firstName, lastName) { return "".concat(firstName[0], ". ").concat(lastName); };
-exports.MyTutors = MyTutors;
-console.log((0, exports.MyTutors)('john', 'doe'));
-var PupilClass = /** @class */ (function () {
-    function PupilClass(firstName, lastName) {
+var printTeacher = function (firstName, lastName) { return "".concat(firstName[0], ". ").concat(lastName); };
+exports.printTeacher = printTeacher;
+console.log((0, exports.printTeacher)('john', 'doe'));
+var StudentClass = /** @class */ (function () {
+    function StudentClass(firstName, lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
-    PupilClass.prototype.workOnHomework = function () {
+    StudentClass.prototype.workOnHomework = function () {
         return 'Currently working';
     };
-    PupilClass.prototype.displayName = function () {
+    StudentClass.prototype.displayName = function () {
         return this.firstName;
     };
-    return PupilClass;
+    return StudentClass;
 }());
 function createStudent(Pupil, firstName, lastName) {
     return new Pupil(firstName, lastName);
 }
-var student1 = createStudent(PupilClass, 'Jamie', 'Hull');
+var student1 = createStudent(StudentClass, 'Jamie', 'Hull');
 console.log(student1);

@@ -35,9 +35,9 @@ interface printTeacherFunction {
     (firstName: string, lastName: string): string;
 }
 
-export const MyTutors: printTeacherFunction = (firstName: string, lastName: string): string => `${firstName[0]}. ${lastName}`;
+export const printTeacher: printTeacherFunction = (firstName: string, lastName: string): string => `${firstName[0]}. ${lastName}`;
 
-console.log(MyTutors('john', 'doe'));
+console.log(printTeacher('john', 'doe'));
 
 interface StudentClassInterface {
     firstName: string;
@@ -48,7 +48,7 @@ interface StudentClassConstructorInterface {
     new(firstName: string, lastName: string): StudentClassInterface; 
 }
 
-class PupilClass implements StudentClassInterface {
+class StudentClass implements StudentClassInterface {
     firstName: string;
     lastName: string;
 
@@ -70,5 +70,5 @@ function createStudent(Pupil: StudentClassConstructorInterface, firstName: strin
     return new Pupil(firstName, lastName);
 }
 
-const student1 = createStudent(PupilClass, 'Jamie', 'Hull');
+const student1 = createStudent(StudentClass, 'Jamie', 'Hull');
 console.log(student1);
