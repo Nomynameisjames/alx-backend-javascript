@@ -14,11 +14,11 @@ describe('sendPaymentRequestToApi function', () => {
 
   it('validate the usage of the Utils function', () => {
     const myStub = sinon.stub((Utils, 'calculateNumber'));
-        myStub.withArgs('SUM', 100, 20).returns(10);
-        sendPaymentRequestToApi(100, 20);
-        chai.expect(spyUtils.calledOnce).to.be.true;
-        chai.expect(spyUtils.calledWith('The total is: 10')).to.be.true;
-    myStub.restore()
-    spyUtils.restore()
+    myStub.withArgs('SUM', 100, 20).returns(10);
+    sendPaymentRequestToApi(100, 20);
+    chai.expect(spyUtils.calledOnce).to.be.true;
+    chai.expect(spyUtils.calledWith('The total is: 10')).to.be.true;
+    myStub.restore();
+    spyUtils.restore();
   });
 });
