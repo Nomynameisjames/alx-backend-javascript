@@ -1,3 +1,4 @@
+/* app is an instance of express */
 import express from 'express';
 
 const app = express();
